@@ -17,12 +17,13 @@ public class MainClient {
 		try {
 			FatturaService fs = locator.getFatturaService();
 			Fattura fattura= fs.getFatturaConCodice("MRT020190");
-			System.out.println(fattura.getCodiceCliente()+" "+fattura.getRagioneSociale()+" "+fattura.getImporto());
+			System.out.println(fattura.getCodiceCliente()+" "
+			                  +fattura.getRagioneSociale()+" "+fattura.getImporto());
 			
 			Fattura[] arrayFatture= fs.prendiTutteFatture(); 
 			for(int i=0;i<5;i++){
-				System.out.println(arrayFatture[i].getCodiceCliente()+
-						" "+arrayFatture[i].getRagioneSociale()+" "+arrayFatture[i].getImporto());
+				System.out.println(arrayFatture[i].getCodiceCliente()+" "
+			                      +arrayFatture[i].getRagioneSociale()+" "+arrayFatture[i].getImporto());
 			}
 			
 		} catch (ServiceException e) {
